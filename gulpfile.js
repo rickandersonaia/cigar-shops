@@ -1,9 +1,20 @@
 // Node modules
-var fs = require('fs'), vm = require('vm'), merge = require('deeply'), chalk = require('chalk'), es = require('event-stream'), child = require('child_process');
+var fs = require('fs'),
+    vm = require('vm'),
+    merge = require('deeply'),
+    chalk = require('chalk'),
+    es = require('event-stream'),
+    child = require('child_process');
 
 // Gulp and plugins
-var gulp = require('gulp'), rjs = require('gulp-requirejs-bundler'), concat = require('gulp-concat'), clean = require('gulp-clean'),
-    replace = require('gulp-replace'), uglify = require('gulp-uglify'), htmlreplace = require('gulp-html-replace'), webserver = require('gulp-webserver');
+var gulp = require('gulp'),
+    rjs = require('gulp-requirejs-bundler'),
+    concat = require('gulp-concat'),
+    clean = require('gulp-clean'),
+    replace = require('gulp-replace'),
+    uglify = require('gulp-uglify'),
+    htmlreplace = require('gulp-html-replace'),
+    webserver = require('gulp-webserver');
 
 // Config
 var requireJsRuntimeConfig = vm.runInNewContext(fs.readFileSync('src/app/require.config.js') + '; require;');
