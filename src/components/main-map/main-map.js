@@ -1,24 +1,24 @@
 define(['knockout', 'text!./main-map.html'], function (ko, templateMarkup) {
-
+    var City = function(){
+        this.id = ko.observable('ps');
+        this.name = ko.observable('Palm Springs');
+        this.lat = ko.observable('33.7667');
+        this.lng = ko.observable('-116.3592');
+        this.zoom = ko.observable('10');
+    };
 
     function MainMap(params) {
         var self = this;
-
-        self.cityList = ko.observableArray([]);
-        self.currentCity = ko.observableArray([]);
-        self.message = ko.computed(function () {
-            return self.currentCity().name + " Cigar Shops";
-        });
-
+        this.currentCity = ko.observable( new City());
+        this.message = this.currentCity().name() + " Cigar Stores";
         var cityData = $.getJSON("components/main-map/main-map-model.json", function (data) {
-            self.cityList(data);
             console.log('Successfully read city data from JSON file');
         });
 
         cityData.done( function (data) {
+            this.currentCity = ko.observable( new City());
             var curCity = chooseCurrentCity(data);
-            self.currentCity(data[curCity]);
-            city = new google.maps.LatLng(data[curCity].lat, data[curCity].lng);
+            city = new google.maps.LatLng(this.currentCity().lat(), this.currentCity().lng());
             currentCityMap(city);
         })
 
@@ -30,14 +30,14 @@ define(['knockout', 'text!./main-map.html'], function (ko, templateMarkup) {
                     "lng": "-116.3592",
                     "zoom": "10"
                 };
-            self.currentCity(defaultCity);
-            city = new google.maps.LatLng(defaultCity.lat, defaultCity.lng);
-            currentCityMap(city);
+
+            location = new google.maps.LatLng(defaultCity.lat, defaultCity.lng);
+            currentCityMap(location);
         })
     }
 
     function chooseCurrentCity(data){
-        return 'la';
+        return 'ps';
     }
 
     function currentCityMap(city){
@@ -55,6 +55,8 @@ define(['knockout', 'text!./main-map.html'], function (ko, templateMarkup) {
             panControl: false
         });
     }
+
+
 
 
     return {viewModel: MainMap, template: templateMarkup};
