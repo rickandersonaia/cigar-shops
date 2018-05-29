@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c61ede75-f301-434a-8a91-415450abdec4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/main-map/main-map-model.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-map/main-map-model.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main-map/main-map.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-map/main-map.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main-map/main-map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-map/main-map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/home.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +21,8 @@
       <file leaf-file-name="main-map.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+            <state relative-caret-position="352">
+              <caret line="28" column="11" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="28" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -31,8 +30,8 @@
       <file leaf-file-name="main-map.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="88">
+              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -49,7 +48,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>less</find>
+      <find>tzoom</find>
     </findStrings>
+    <replaceStrings>
+      <replace>zoomVal</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,8 +66,8 @@
         <option value="$PROJECT_DIR$/src/app/components.config.js" />
         <option value="$PROJECT_DIR$/src/components/main-map/main-map-model.js" />
         <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/src/components/main-map/main-map-model.json" />
         <option value="$PROJECT_DIR$/src/pages/home/home.html" />
+        <option value="$PROJECT_DIR$/src/components/main-map/main-map-model.json" />
         <option value="$PROJECT_DIR$/src/components/main-map/main-map.html" />
         <option value="$PROJECT_DIR$/src/components/main-map/main-map.js" />
       </list>
@@ -212,12 +215,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527447936696</updated>
-      <workItem from="1527447938054" duration="40214000" />
+      <workItem from="1527447938054" duration="49049000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40214000" />
+    <option name="totallyTimeSpent" value="49049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -333,13 +336,6 @@
     <entry file="file://$PROJECT_DIR$/src/components/nav-bar/nav-bar.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map-model.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/home/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -361,17 +357,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map-model.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="88">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        <state relative-caret-position="352">
+          <caret line="28" column="11" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="28" selection-end-column="11" />
         </state>
       </provider>
     </entry>

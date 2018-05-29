@@ -1,20 +1,23 @@
 {
   "ps" : {
+    "id": "ps",
     "name": "Palm Springs",
     "lat": "33.7667",
     "lng": "-116.3592",
-    "zoom": "10"
+    "zoom": 10
   },
   "la": {
+    "id": "la",
     "name": "Los Angeles",
     "lat": "34.052",
     "lng": "-118.2437",
-    "zoom": "10"
+    "zoom": 10
   },
   "sd": {
+    "id": "sd",
     "name": "San Diego",
     "lat": "32.7157",
     "lng": "-117.1611",
-    "zoom": "10"
+    "zoom": 10
   }
 }
