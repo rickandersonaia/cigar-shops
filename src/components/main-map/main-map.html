@@ -1,7 +1,9 @@
 
 <!--<p data-bind='text: cityList().ps.name'></p>-->
 
-<h2  data-bind='text: message()'></h2>
+<h2 data-bind='text: message'></h2>
+
+<p data-bind="text: currentCity().name"></p>
 
 <ul data-bind="foreach: cityList">
     <li data-bind="text: name"></li>

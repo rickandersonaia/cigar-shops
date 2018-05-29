@@ -10,8 +10,8 @@ define(['knockout', 'text!./main-map.html'], function (ko, templateMarkup) {
     function MainMap(params) {
         var self = this;
         this.cityList = ko.observableArray();
-        this.message = ko.observable();
         this.currentCity = ko.observableArray();
+        this.message = ko.observable();
 
         var cityData = $.getJSON("components/main-map/main-map-model.json", function (data) {
             console.log('Successfully read city data from JSON file');
@@ -23,7 +23,7 @@ define(['knockout', 'text!./main-map.html'], function (ko, templateMarkup) {
             }
 
             self.currentCity(self.cityList()[0]) ;
-            self.message = self.currentCity().name() + " Cigar Stores";
+            self.message(self.currentCity().name() + " Cigar Stores");
 
             // var curCity = chooseCurrentCity(data);
             city = new google.maps.LatLng(self.currentCity().lat(), self.currentCity().lng());
