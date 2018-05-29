@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c61ede75-f301-434a-8a91-415450abdec4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/main-map/main-map-model.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/main-map/main-map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-map/main-map.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,16 +25,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main-map.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main-map.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+            <state relative-caret-position="521">
+              <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main-map-model.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main-map-model.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map-model.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="418">
@@ -111,10 +105,10 @@
         <option value="$PROJECT_DIR$/src/app/startup.js" />
         <option value="$PROJECT_DIR$/src/app/components.config.js" />
         <option value="$PROJECT_DIR$/src/components/main-map/main-map-model.js" />
-        <option value="$PROJECT_DIR$/src/components/main-map/main-map-model.json" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/components/main-map/main-map.html" />
         <option value="$PROJECT_DIR$/src/components/main-map/main-map.js" />
+        <option value="$PROJECT_DIR$/src/components/main-map/main-map-model.json" />
       </list>
     </option>
   </component>
@@ -194,6 +188,13 @@
               <item name="cigar-shops" type="b2602c69:ProjectViewProjectNode" />
               <item name="cigar-shops" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="nav-bar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cigar-shops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cigar-shops" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -253,12 +254,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527447936696</updated>
-      <workItem from="1527447938054" duration="27172000" />
+      <workItem from="1527447938054" duration="29978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27172000" />
+    <option name="totallyTimeSpent" value="29978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -396,17 +397,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/nav-bar/nav-bar.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/nav-bar/nav-bar.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map-model.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
         </state>
       </provider>
     </entry>
