@@ -9,6 +9,8 @@ define(['knockout', 'text!./main-map.html'], function (ko, templateMarkup) {
 
     function MainMap(params) {
         var self = this;
+        var service;
+        var infowindow;
         this.cityList = ko.observableArray();
         this.currentCity = ko.observableArray();
         this.message = ko.observable();
@@ -67,6 +69,47 @@ define(['knockout', 'text!./main-map.html'], function (ko, templateMarkup) {
             },
             mapTypeControl: false,
             panControl: false
+        });
+        var request = {
+            location: city,
+            radius: '50000',
+            query: 'cigar store AND NOT vape'
+        };
+
+        service = new google.maps.places.PlacesService(map);
+        service.textSearch(request, callback);
+        infoWindow = new google.maps.InfoWindow();
+    }
+
+    function callback(results, status) {
+        console.log(status);
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+            localStorage.setItem('testObject', JSON.stringify(results));
+            for (var i = 0; i < results.length; i++) {
+                var place = results[i];
+                console.log(place);
+                addMarker(place);
+            }
+        }
+    }
+
+    function addMarker(place) {
+        var marker = new google.maps.Marker({
+            map: map,
+            position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+            var request = {placeId: place.place_id};
+
+            service.getDetails(request, function(result, status) {
+                if (status !== google.maps.places.PlacesServiceStatus.OK) {
+                    console.error(status);
+                    return;
+                }
+                infoWindow.setContent(result.name);
+                infoWindow.open(map, marker);
+            });
         });
     }
 
