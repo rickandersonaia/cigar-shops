@@ -5,9 +5,12 @@
 
 <p data-bind="text: currentCity().name"></p>
 
-<ul data-bind="foreach: cityList">
-    <li data-bind="text: name"></li>
-</ul>
+<!--<ul data-bind="foreach: cityList">-->
+    <!--<li data-bind="text: name, click: $parent.setCurrentCity"></li>-->
+<!--</ul>-->
+<!-- ko foreach: cityList -->
+<button data-bind="text: name, click: $parent.setCurrentCity"></button>
+<!-- /ko -->
 
 <div id="map"></div>
 

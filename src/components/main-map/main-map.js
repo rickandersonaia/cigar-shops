@@ -42,6 +42,12 @@ define(['knockout', 'text!./main-map.html'], function (ko, templateMarkup) {
             location = new google.maps.LatLng(defaultCity.lat, defaultCity.lng);
             currentCityMap(location, defaultCity.zoom);
         })
+
+        this.setCurrentCity = function (selected) {
+            self.currentCity(selected);
+            city = new google.maps.LatLng(self.currentCity().lat(), self.currentCity().lng());
+            currentCityMap(city, self.currentCity().zoom());
+        }
     }
 
     function chooseCurrentCity(data) {
