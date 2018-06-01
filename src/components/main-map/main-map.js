@@ -120,7 +120,20 @@ define(['knockout', 'jquery', 'bootstrap', 'text!./main-map.html'], function (ko
                         console.error(status);
                         return;
                     }
-                    infoWindow.setContent(result.name);
+
+                    if(result.opening_hours.open_now){
+                        var open = '<span class="open">Open Now</span>'
+                    }else{
+                        var open = '<span class="closed">Closed</span>'
+                    }
+
+                    var content = '<p class="info-window-title"><b>' + result.name + '</b></p>' +
+                        '<p>' + result.vicinity + '</p>' +
+                        '<p>' + result.formatted_phone_number + '</p>' +
+                        '<p> Rating: ' + result.rating + ' of 5</p>' +
+                        '<p class="info-window-footer">' + open + '<button id="more-details">More details</button></p>';
+                    infoWindow.setContent(content);
+
                     infoWindow.open(map, marker);
                 });
             });
