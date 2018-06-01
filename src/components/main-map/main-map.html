@@ -1,18 +1,16 @@
 
-<!--<p data-bind='text: cityList().ps.name'></p>-->
-
-<h2 data-bind='text: message'></h2>
-
-<p data-bind="text: currentCity().name"></p>
-
-<!--<ul data-bind="foreach: cityList">-->
-    <!--<li data-bind="text: name, click: $parent.setCurrentCity"></li>-->
-<!--</ul>-->
 <!-- ko foreach: cityList -->
 <button data-bind="text: name, click: $parent.setCurrentCity"></button>
 <!-- /ko -->
 
+<h2 data-bind="text: message, attr: {'data-city': currentCity().name}"></h2>
 <div id="map"></div>
 
+<!-- ko foreach: shopList -->
+<p data-bind="text: name"></p>
+<!-- /ko -->
 
-
+<div data-bind="component:{
+    name: 'side-list',
+    params: {
+}"></div>

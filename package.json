@@ -21,6 +21,7 @@
     "crossroads": "^0.12.2",
     "hasher": "^1.2.0",
     "knockout": "^3.4.1",
+    "knockout-mapping": "^2.6.0",
     "requirejs": "^2.3.2",
     "requirejs-text": "^2.0.12"
   }

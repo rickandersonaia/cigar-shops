@@ -9,6 +9,8 @@
     components: [
         // [Scaffolded components will be inserted here. To retain this feature, don't remove this comment.]
         
+		{ name: 'side-list', path: 'components/side-list/side-list' },
+        
 		{ name: 'test', path: 'components/test/test' },
         
 		{ name: 'main-map', path: 'components/main-map/main-map' },
