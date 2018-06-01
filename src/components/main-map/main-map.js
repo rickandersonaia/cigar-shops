@@ -19,6 +19,7 @@ define(['knockout', 'cities', 'text!./main-map.html'], function (ko, cities, tem
         this.cityList = ko.observableArray();
         this.currentCity = ko.observableArray();
         this.message = ko.observable();
+        this.shopList = ko.observableArray();
 
 
         var cityData = $.getJSON("components/main-map/main-map-model.json", function (data) {
@@ -33,9 +34,8 @@ define(['knockout', 'cities', 'text!./main-map.html'], function (ko, cities, tem
             self.currentCity(self.cityList()[0]);
             self.message(self.currentCity().name() + " Cigar Stores");
 
-            // var curCity = chooseCurrentCity(data);
             city = new google.maps.LatLng(self.currentCity().lat(), self.currentCity().lng());
-            MainMap.currentCityMap(city, self.currentCity().zoom());
+            self.currentCityMap(city, self.currentCity().zoom());
         });
 
         cityData.fail(function () {
@@ -48,18 +48,19 @@ define(['knockout', 'cities', 'text!./main-map.html'], function (ko, cities, tem
             };
 
             location = new google.maps.LatLng(defaultCity.lat, defaultCity.lng);
-            MainMap.currentCityMap(location, defaultCity.zoom);
+            self.currentCityMap(location, defaultCity.zoom);
             self.message(defaultCity.name + " Cigar Stores");
+
         });
 
         this.setCurrentCity = function (selected) {
             self.currentCity(selected);
             city = new google.maps.LatLng(self.currentCity().lat(), self.currentCity().lng());
-            MainMap.currentCityMap(city, self.currentCity().zoom());
+            self.currentCityMap(city, self.currentCity().zoom());
             self.message(self.currentCity().name() + " Cigar Stores");
         };
 
-        MainMap.currentCityMap = function (city, zoomVal) {
+        this.currentCityMap = function(city, zoomVal) {
             map = new google.maps.Map(document.getElementById('map'), {
                 center: city,
                 zoom: zoomVal,
@@ -80,27 +81,28 @@ define(['knockout', 'cities', 'text!./main-map.html'], function (ko, cities, tem
             };
 
             service = new google.maps.places.PlacesService(map);
-            service.textSearch(request, MainMap.callback);
+            service.textSearch(request, self.callback);
             infoWindow = new google.maps.InfoWindow();
-        }
+        };
 
-       MainMap.callback = function(results, status) {
+        this.callback = function(results, status) {
             if (status == google.maps.places.PlacesServiceStatus.OK) {
                 for (var i = 0; i < results.length; i++) {
                     var place = results[i];
                     addMarker(place);
                 }
-                MainMap.createShopList(results);
+                console.log(self.shopList());
+                self.shopList(self.createShopList(results));
+                console.log(self.shopList());
             }
         };
 
-        MainMap.createShopList = function(placesResults){
-            var self = this;
-            this.shopList = ko.observableArray();
-
+        this.createShopList = function(placesResults){
+            shopList = [];
             for (let place in placesResults) {
-                self.shopList.push(new Place(placesResults[place]));
+                shopList.push(new Place(placesResults[place]));
             }
+            return shopList;
         };
 
 

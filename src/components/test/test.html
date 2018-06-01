@@ -2,4 +2,13 @@
 
 <p data-bind='text: message'></p>
 
-<div id="test-map"></div>
+<!-- ko foreach: cityList -->
+<button data-bind="text: name, click: $parent.setCurrentCity"></button>
+<!-- /ko -->
+
+<h2 data-bind="text: message, attr: {'data-city': currentCity().name}"></h2>
+<div id="map"></div>
+
+<!-- ko foreach: shopList -->
+<p data-bind="text: name"></p>
+<!-- /ko -->
