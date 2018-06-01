@@ -9,6 +9,10 @@
     components: [
         // [Scaffolded components will be inserted here. To retain this feature, don't remove this comment.]
         
+		{ name: 'detail-view', path: 'components/detail-view/detail-view' },
+        
+		{ name: 'card-view', path: 'components/card-view/card-view' },
+        
 		{ name: 'side-list', path: 'components/side-list/side-list' },
         
 		{ name: 'test', path: 'components/test/test' },
