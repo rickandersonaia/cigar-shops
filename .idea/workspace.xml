@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c61ede75-f301-434a-8a91-415450abdec4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/require.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/require.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main-map/main-map.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-map/main-map.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main-map/main-map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-map/main-map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/test/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/test/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/side-list/side-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/side-list/side-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/side-list/side-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/side-list/side-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/home.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,26 +29,8 @@
       <file leaf-file-name="main-map.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="95" column="45" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="require.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/require.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cities.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/cities/cities.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="308">
+              <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -50,44 +38,44 @@
       <file leaf-file-name="side-list.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/side-list/side-list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="286">
+              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main-map.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="side-list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/side-list/side-list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="107" selection-start-line="3" selection-start-column="107" selection-end-line="3" selection-end-column="107" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main-map.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map.html">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/index.html">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/test/test.html">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/home/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/test/test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="81" column="70" lean-forward="true" selection-start-line="81" selection-start-column="70" selection-end-line="81" selection-end-column="70" />
+            <state relative-caret-position="110">
+              <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -106,6 +94,7 @@
       <find>less</find>
       <find>tzoom</find>
       <find>storag</find>
+      <find>hoeknpm</find>
     </findStrings>
     <replaceStrings>
       <replace>zoomVal</replace>
@@ -122,18 +111,20 @@
         <option value="$PROJECT_DIR$/src/components/main-map/main-map-model.js" />
         <option value="$PROJECT_DIR$/src/components/main-map/main-map-model.json" />
         <option value="$PROJECT_DIR$/src/components/nav-bar/nav-bar.html" />
-        <option value="$PROJECT_DIR$/src/css/styles.css" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/src/components/side-list/side-list.js" />
         <option value="$PROJECT_DIR$/src/models/cities.js" />
-        <option value="$PROJECT_DIR$/src/app/require.config.js" />
-        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/models/cities/cities.js" />
         <option value="$PROJECT_DIR$/src/components/test/test.html" />
         <option value="$PROJECT_DIR$/src/components/test/test.js" />
+        <option value="$PROJECT_DIR$/src/pages/home/home.js" />
         <option value="$PROJECT_DIR$/src/pages/home/home.html" />
-        <option value="$PROJECT_DIR$/src/components/main-map/main-map.js" />
+        <option value="$PROJECT_DIR$/src/css/styles.css" />
+        <option value="$PROJECT_DIR$/src/components/side-list/side-list.html" />
+        <option value="$PROJECT_DIR$/src/components/side-list/side-list.js" />
         <option value="$PROJECT_DIR$/src/components/main-map/main-map.html" />
+        <option value="$PROJECT_DIR$/src/app/require.config.js" />
+        <option value="$PROJECT_DIR$/src/components/main-map/main-map.js" />
+        <option value="$PROJECT_DIR$/src/index.html" />
       </list>
     </option>
   </component>
@@ -220,7 +211,27 @@
               <item name="cigar-shops" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="nav-bar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cigar-shops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cigar-shops" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="side-list" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cigar-shops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cigar-shops" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cigar-shops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cigar-shops" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cigar-shops" type="b2602c69:ProjectViewProjectNode" />
@@ -301,12 +312,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527447936696</updated>
-      <workItem from="1527447938054" duration="106832000" />
+      <workItem from="1527447938054" duration="114312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106832000" />
+    <option name="totallyTimeSpent" value="114312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -321,7 +332,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" weight="0.32900432" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32900432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -395,13 +406,6 @@
         <state relative-caret-position="-13894" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/home/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="69" selection-start-column="69" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map-model.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -412,27 +416,10 @@
     <entry file="file://$PROJECT_DIR$/src/components/test/main-map-model.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/nav-bar/nav-bar.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/nav-bar/nav-bar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -443,13 +430,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/router.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/app/app.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/side-list/side-list.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/cities/cities.json">
@@ -469,38 +450,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/startup.js">
+    <entry file="file://$PROJECT_DIR$/src/components/test/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="16" selection-end-column="3" />
+        <state relative-caret-position="389">
+          <caret line="81" column="70" lean-forward="true" selection-start-line="81" selection-start-column="70" selection-end-line="81" selection-end-column="70" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/side-list/side-list.js">
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/npm-shrinkwrap.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="179">
+          <caret line="518" column="13" selection-start-line="518" selection-start-column="13" selection-end-line="518" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/cities/cities.js">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/require.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="198">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -511,31 +481,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/test/test.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/home/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="81" column="70" lean-forward="true" selection-start-line="81" selection-start-column="70" selection-end-line="81" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="95" column="45" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
+        <state relative-caret-position="66">
+          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/home/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="110">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/cities/cities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/side-list/side-list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/side-list/side-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="107" selection-start-line="3" selection-start-column="107" selection-end-line="3" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/startup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/router.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/require.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="93" selection-start-line="12" selection-start-column="93" selection-end-line="12" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/nav-bar/nav-bar.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
         </state>
       </provider>
     </entry>

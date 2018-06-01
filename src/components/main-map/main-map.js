@@ -1,4 +1,4 @@
-define(['knockout', 'cities', 'text!./main-map.html'], function (ko, cities, templateMarkup) {
+define(['knockout', 'jquery', 'bootstrap', 'text!./main-map.html'], function (ko, $, bs, templateMarkup) {
     var City = function (data) {
         this.id = ko.observable(data.id);
         this.name = ko.observable(data.name);

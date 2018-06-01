@@ -1,16 +1,36 @@
+<div class="row">
+    <!-- ko foreach: cityList -->
+    <button data-bind="text: name, click: $parent.setCurrentCity"></button>
+    <!-- /ko -->
+    <h2 data-bind="text: message, attr: {'data-city': currentCity().name}"></h2>
+</div>
+<div class="row">
+    <div class="col-md-9 col-md-push-3">
+        <ul class="nav nav-tabs">
+            <li class="active" role="presentation"><a data-toggle="tab" href="#map">Map</a></li>
+            <li role="presentation"><a data-toggle="tab" href="#cards">Store Cards</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="map" class="tab-pane fade in active"></div>
+            <div id="cards" class="tab-pane fade">
+                <p>Howdy</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-md-pull-9">
+        <div data-bind="component:{
+            name: 'side-list',
+            params: { shopList: shopList}
+        }">
 
-<!-- ko foreach: cityList -->
-<button data-bind="text: name, click: $parent.setCurrentCity"></button>
-<!-- /ko -->
+        </div>
+    </div>
+</div>
 
-<h2 data-bind="text: message, attr: {'data-city': currentCity().name}"></h2>
-<div id="map"></div>
 
-<!-- ko foreach: shopList -->
-<p data-bind="text: placeName"></p>
-<!-- /ko -->
 
-<div data-bind="component:{
-    name: 'side-list',
-    params: {
-}"></div>
+
+
+
+
+
