@@ -1,13 +1,21 @@
-define(['knockout', 'text!./card-view.html'], function(ko, templateMarkup) {
+define(['knockout', 'jquery',  'jquery.bootstrap', 'text!./card-view.html'], function (ko, $, bs, templateMarkup) {
 
-  function CardView(params) {
-    this.message = ko.observable('Hello from the card-view component!');
-  }
+    var Shop = function (data) {
+        this.name = ko.observable(data.name);
+        this.address = ko.observable(data.address);
+        this.hours = ko.observableArray(data.hours);
+        this.rating = ko.observable(data.rating);
+        this.images = ko.observableArray(data.images);
+    };
 
-  // This runs when the component is torn down. Put here any logic necessary to clean up,
-  // for example cancelling setTimeouts or disposing Knockout subscriptions/computeds.
-  CardView.prototype.dispose = function() { };
+    function CardView(params) {
+        var self = this;
 
-  return { viewModel: CardView, template: templateMarkup };
+        this.message = ko.observable('Hello from the card-view component!');
+        this.shopList = params.shopList;
+    }
+
+
+    return {viewModel: CardView, template: templateMarkup};
 
 });

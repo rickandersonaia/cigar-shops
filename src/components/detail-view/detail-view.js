@@ -1,13 +1,13 @@
-define(['knockout', 'text!./detail-view.html'], function(ko, templateMarkup) {
+define(['knockout', 'text!./detail-view.html'], function (ko, templateMarkup) {
 
-  function DetailView(params) {
-    this.message = ko.observable('Hello from the detail-view component!');
-  }
+    function DetailView(params) {
+        var self = this;
 
-  // This runs when the component is torn down. Put here any logic necessary to clean up,
-  // for example cancelling setTimeouts or disposing Knockout subscriptions/computeds.
-  DetailView.prototype.dispose = function() { };
+        this.message = ko.observable('Hello from the detail-view component!');
+        this.shopDetails = params.shopDetails;
+    }
 
-  return { viewModel: DetailView, template: templateMarkup };
+
+    return {viewModel: DetailView, template: templateMarkup};
 
 });

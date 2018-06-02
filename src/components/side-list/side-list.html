@@ -1,7 +1,8 @@
 <div id="shop-list" class="list-group">
 
 <!-- ko foreach: shopList -->
-    <button type="button" class="list-group-item" data-bind="text: placeName, click: $parent.setCurrentShop"></button>
+    <button type="button" class="list-group-item"
+            data-bind="text: placeName, click: $parents[1].setCurrentShop"></button>
 <!-- /ko -->
 
 </div>

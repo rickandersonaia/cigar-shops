@@ -1,4 +1,4 @@
-define(['knockout', 'jquery', 'bootstrap', 'text!./main-map.html'], function (ko, $, bs, templateMarkup) {
+define(['knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.html'], function (ko, $, bs, templateMarkup) {
     var City = function (data) {
         this.id = ko.observable(data.id);
         this.name = ko.observable(data.name);
@@ -15,19 +15,24 @@ define(['knockout', 'jquery', 'bootstrap', 'text!./main-map.html'], function (ko
     function MainMap(params) {
         var self = this;
         var service;
-        var infowindow;
         this.cityList = ko.observableArray();
         this.currentCity = ko.observableArray();
+        this.currentShop = ko.observableArray();
         this.message = ko.observable();
         this.shopList = ko.observableArray();
+        this.shopResult = ko.observableArray();
 
+        // cityData is the initial JSON data (model) that contains the parameters of the 3
+        // cities in question.  Here we read the JSON file and set observables based on
+        // success or failure
 
         var cityData = $.getJSON("components/main-map/main-map-model.json", function (data) {
             console.log('Successfully read city data from JSON file');
         });
 
+        // Do this on successful reading of JSON file
         cityData.done(function (data) {
-            for (let element in data) {
+            for ( element in data) {
                 self.cityList.push(new City(data[element]));
             }
 
@@ -38,6 +43,7 @@ define(['knockout', 'jquery', 'bootstrap', 'text!./main-map.html'], function (ko
             self.currentCityMap(city, self.currentCity().zoom());
         });
 
+        // Do this upon failure to read of JSON file
         cityData.fail(function () {
             console.log('Failed to read city data from JSON file')
             var defaultCity = {
@@ -58,6 +64,26 @@ define(['knockout', 'jquery', 'bootstrap', 'text!./main-map.html'], function (ko
             city = new google.maps.LatLng(self.currentCity().lat(), self.currentCity().lng());
             self.currentCityMap(city, self.currentCity().zoom());
             self.message(self.currentCity().name() + " Cigar Stores");
+        };
+
+        this.setCurrentShop = function (selected){
+            self.currentShop(selected);
+            console.log('howdy');
+            var request = {placeId: self.currentShop().placeId()};
+
+            service = new google.maps.places.PlacesService(map);
+            service.getDetails(request, function (result, status) {
+                if (status !== google.maps.places.PlacesServiceStatus.OK) {
+                    console.error(status);
+                    return;
+                }
+                if(status == google.maps.places.PlacesServiceStatus.OK) {
+                    self.shopResult(result);
+                    console.log((self.shopResult()));
+                    $('.nav-tabs a[href="#store-detail"]').tab('show');
+                }
+            });
+
         };
 
         this.currentCityMap = function(city, zoomVal) {
@@ -81,32 +107,33 @@ define(['knockout', 'jquery', 'bootstrap', 'text!./main-map.html'], function (ko
             };
 
             service = new google.maps.places.PlacesService(map);
-            service.textSearch(request, self.callback);
+            service.textSearch(request, self.placesServiceCalback);
             infoWindow = new google.maps.InfoWindow();
         };
 
-        this.callback = function(results, status) {
+
+        this.placesServiceCalback = function(results, status) {
             if (status == google.maps.places.PlacesServiceStatus.OK) {
                 for (var i = 0; i < results.length; i++) {
                     var place = results[i];
-                    addMarker(place);
+                    self.addMarker(place);
                 }
-                console.log(self.shopList());
+
                 self.shopList(self.createShopList(results));
-                console.log(self.shopList());
             }
         };
 
+
         this.createShopList = function(placesResults){
             shopList = [];
-            for (let place in placesResults) {
+            for ( place in placesResults) {
                 shopList.push(new Place(placesResults[place]));
             }
             return shopList;
         };
 
 
-        function addMarker(place) {
+        this.addMarker = function(place) {
             var marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location
@@ -121,6 +148,8 @@ define(['knockout', 'jquery', 'bootstrap', 'text!./main-map.html'], function (ko
                         return;
                     }
 
+                    self.shopResult(result);
+
                     if(result.opening_hours.open_now){
                         var open = '<span class="open">Open Now</span>'
                     }else{
@@ -132,9 +161,14 @@ define(['knockout', 'jquery', 'bootstrap', 'text!./main-map.html'], function (ko
                         '<p>' + result.formatted_phone_number + '</p>' +
                         '<p> Rating: ' + result.rating + ' of 5</p>' +
                         '<p class="info-window-footer">' + open + '<button id="more-details">More details</button></p>';
+
                     infoWindow.setContent(content);
 
                     infoWindow.open(map, marker);
+
+                    $('#more-details').click( function (){
+                        $('.nav-tabs a[href="#store-detail"]').tab('show');
+                    });
                 });
             });
         }

@@ -1,3 +1,11 @@
-<h2>detail-view</h2>
+<div data-bind="if: shopDetails().name">
+    <h2 data-bind='text: shopDetails().name'></h2>
 
-<p data-bind='text: message'></p>
+    <p data-bind='text: message'></p>
+
+</div>
+
+<div data-bind="ifnot: shopDetails().name">
+    <h2>You haven't selected a store yet</h2>
+    <p>Choose a store from the map or from the list on the side</p>
+</div>

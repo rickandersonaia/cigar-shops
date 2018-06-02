@@ -8,7 +8,7 @@
     <div class="col-md-9 col-md-push-3">
         <ul class="nav nav-tabs">
             <li class="active" role="presentation"><a data-toggle="tab" href="#map">Map</a></li>
-            <li role="presentation"><a data-toggle="tab" href="#cards">Store Cards</a></li>
+            <li role="presentation"><a data-toggle="tab" href="#cards">Favorites</a></li>
             <li role="presentation"><a data-toggle="tab" href="#store-detail">Store Detail</a></li>
         </ul>
         <div class="tab-content">
@@ -17,7 +17,11 @@
                 <card-view></card-view>
             </div>
             <div id="store-detail" class="tab-pane fade">
-                <detail-view></detail-view>
+                <div data-bind="component:{
+                        name: 'detail-view',
+                        params: { shopDetails: shopResult}
+                    }">
+                </div>
             </div>
         </div>
     </div>
