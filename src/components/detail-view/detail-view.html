@@ -1,16 +1,15 @@
 <div data-bind="if: shopDetails().name">
     <h2 data-bind='text: shopDetails().name'></h2>
 
-    <!--<p data-bind='text: placeData()'></p>-->
     <p data-bind='text: message'></p>
     <p data-bind="text: shopDetails().formatted_address"></p>
     <img data-bind="attr: {src: shopPhoto, alt: shopDetails().name}">
-    <p data-bind="text: shopDetails().formatted_address"></p>
-    <!--<div data-bind="component:{-->
-                        <!--name: 'image-from-google',-->
-                        <!--params: { placeData: placeData()}-->
-                    <!--}">-->
-    <!--</div>-->
+    
+    <div data-bind="component:{
+                        name: 'yelp-details',
+                        params: { shopDetails: shopDetails}
+                    }">
+    </div>
 
 
 </div>

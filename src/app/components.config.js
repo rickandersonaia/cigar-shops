@@ -8,6 +8,10 @@
     // Components - knockout components intended as parts of pages, a.k.a. components
     components: [
         // [Scaffolded components will be inserted here. To retain this feature, don't remove this comment.]
+        
+		{ name: 'yelp-reviews', path: 'components/yelp-reviews/yelp-reviews' },
+        
+		{ name: 'yelp-details', path: 'components/yelp-details/yelp-details' },
 
         { name: 'detail-view', path: 'components/detail-view/detail-view' },
 		{ name: 'card-view', path: 'components/card-view/card-view' },
