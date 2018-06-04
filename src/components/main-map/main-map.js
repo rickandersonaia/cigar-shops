@@ -21,6 +21,8 @@ define(['knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.html'], func
         this.message = ko.observable();
         this.shopList = ko.observableArray();
         this.shopResult = ko.observableArray();
+        this.shopPhotos = ko.observableArray();
+        this.shopPhoto = ko.observable();
 
         // cityData is the initial JSON data (model) that contains the parameters of the 3
         // cities in question.  Here we read the JSON file and set observables based on
@@ -79,12 +81,27 @@ define(['knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.html'], func
                 }
                 if(status == google.maps.places.PlacesServiceStatus.OK) {
                     self.shopResult(result);
+                    self.getShopPhotos(result);
 
                     $('.nav-tabs a[href="#store-detail"]').tab('show');
                 }
             });
 
         };
+
+        this.getShopPhotos = function(place){
+
+            var photos = place.photos;
+            if (!photos) {
+                return;
+            }
+            self.shopPhoto(photos[0].getUrl({maxWidth: 640}));
+            var index;
+            for(index=0; index < photos.length; index++){
+                shopPhoto = photos[index].getUrl({maxWidth: 640});
+                self.shopPhotos.push(shopPhoto);
+            }
+        }
 
         this.currentCityMap = function(city, zoomVal) {
             map = new google.maps.Map(document.getElementById('map'), {

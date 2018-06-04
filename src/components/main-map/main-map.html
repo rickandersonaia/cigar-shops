@@ -19,8 +19,12 @@
             <div id="store-detail" class="tab-pane fade">
                 <div data-bind="component:{
                         name: 'detail-view',
-                        params: { shopDetails: shopResult}
+                        params: {
+                            shopDetails: shopResult,
+                            shopPhoto: shopPhoto
+                        }
                     }">
+
                 </div>
             </div>
         </div>

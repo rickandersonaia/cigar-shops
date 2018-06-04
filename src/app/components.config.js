@@ -8,8 +8,6 @@
     // Components - knockout components intended as parts of pages, a.k.a. components
     components: [
         // [Scaffolded components will be inserted here. To retain this feature, don't remove this comment.]
-        
-		{ name: 'image-from-google', path: 'components/image-from-google/image-from-google' },
 
         { name: 'detail-view', path: 'components/detail-view/detail-view' },
 		{ name: 'card-view', path: 'components/card-view/card-view' },

@@ -3,11 +3,14 @@
 
     <!--<p data-bind='text: placeData()'></p>-->
     <p data-bind='text: message'></p>
-    <div data-bind="component:{
-                        name: 'image-from-google',
-                        params: { placeData: placeData()}
-                    }">
-    </div>
+    <p data-bind="text: shopDetails().formatted_address"></p>
+    <img data-bind="attr: {src: shopPhoto, alt: shopDetails().name}">
+    <p data-bind="text: shopDetails().formatted_address"></p>
+    <!--<div data-bind="component:{-->
+                        <!--name: 'image-from-google',-->
+                        <!--params: { placeData: placeData()}-->
+                    <!--}">-->
+    <!--</div>-->
 
 
 </div>
