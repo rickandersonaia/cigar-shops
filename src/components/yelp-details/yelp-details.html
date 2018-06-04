@@ -1,3 +1,15 @@
-<h2>yelp-details</h2>
+<div data-bind="if: yelpBusinessDetails().name">
+    <h3>Yelpers' Perspective</h3>
+    <p>Price Range: <span data-bind="text: yelpBusinessDetails().price"></span></p>
+    <p>Yelpers give <span data-bind="text: yelpBusinessDetails().name"></span> a
+        <span data-bind="text: yelpBusinessDetails().rating"></span> star rating with
+        <span data-bind="text: yelpBusinessDetails().review_count"></span> reviews.
+    </p>
+    <p><a data-bind="attr: {href: yelpBusinessDetails().url}"> Read the Yelp Reviews</a></p>
+</div>
 
-<p data-bind='text: message'></p>
+<div data-bind="ifnot: yelpBusinessDetails().name">
+    <h3>Information from Yelp about this business</h3>
+    <p>Yelp business details are loading</p>
+</div>
+
