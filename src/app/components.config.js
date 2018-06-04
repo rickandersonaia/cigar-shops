@@ -9,6 +9,8 @@
     components: [
         // [Scaffolded components will be inserted here. To retain this feature, don't remove this comment.]
         
+		{ name: 'favorite-view', path: 'components/favorite-view/favorite-view' },
+        
 		{ name: 'yelp-reviews', path: 'components/yelp-reviews/yelp-reviews' },
         
 		{ name: 'yelp-details', path: 'components/yelp-details/yelp-details' },

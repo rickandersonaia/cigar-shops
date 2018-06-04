@@ -5,6 +5,13 @@
     </header>
     <div class="row">
         <div class="google-details col-md-6">
+            <div class="favorites">
+                <div data-bind="component:{
+                        name: 'favorite-view',
+                        params: { shopDetails: shopDetails}
+                    }">
+                </div>
+            </div>
             <p data-bind="text: shopDetails().formatted_address"></p>
         </div>
         <div class="yelp-details col-md-6">

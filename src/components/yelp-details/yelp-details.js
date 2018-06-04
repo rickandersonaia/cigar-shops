@@ -7,16 +7,6 @@ define(['knockout', 'text!./yelp-details.html'], function (ko, templateMarkup) {
 
         this.shopDetails = params.shopDetails;
 
-        this.locationQueryParam = ko.computed(function () {
-            var address = self.shopDetails().formatted_address;
-            return address.split(' ').join('+');
-        }, this);
-
-        this.businessNameQueryParam = ko.computed(function () {
-            var name = self.shopDetails().name;
-            return name.split(' ').join('+');
-        }, this);
-
         this.yelpBusinessDetails = ko.observableArray();
 
         this.yelp = ko.computed(function () {
@@ -35,7 +25,6 @@ define(['knockout', 'text!./yelp-details.html'], function (ko, templateMarkup) {
             };
             $.ajax(requestObj)
                 .done(function (response) {
-                    console.log(response.businesses[0]);
                     self.yelpBusinessDetails( response.businesses[0]);
                 });
         }, this).extend({ deferred: true });

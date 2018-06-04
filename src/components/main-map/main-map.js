@@ -1,4 +1,4 @@
-define(['knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.html'], function (ko, $, bs, templateMarkup) {
+define(['ignore', 'knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.html'], function (ig, ko, $, bs, templateMarkup) {
     var City = function (data) {
         this.id = ko.observable(data.id);
         this.name = ko.observable(data.name);
@@ -131,12 +131,21 @@ define(['knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.html'], func
 
         this.placesServiceCalback = function(results, status) {
             if (status == google.maps.places.PlacesServiceStatus.OK) {
+
+                var goodResults = [{}];
+                var ignoreList = localStorage.getItem('cigarStoreIgnoreList')
+                    ? JSON.parse(localStorage.getItem('cigarStoreIgnoreList')) : [];
+
                 for (var i = 0; i < results.length; i++) {
+                    if ( ignoreList.includes( results[i].place_id ) || rickIgnoreList.includes(results[i].place_id)){
+                        continue;
+                    }
                     var place = results[i];
                     self.addMarker(place);
+                    goodResults.push( results[i]);
                 }
 
-                self.shopList(self.createShopList(results));
+                self.shopList(self.createShopList(goodResults));
             }
         };
 

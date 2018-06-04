@@ -1,0 +1,22 @@
+var rickIgnoreList = [
+    "ChIJH-owLewb24ARRqe5GGviLWM",
+    "ChIJtf9mjCcD24ARSr5D0OFxGBA",
+    "ChIJhdNfSI_-2oAR091xjEeFBeY",
+    "ChIJp2xD5Lob24ARfD79zH8qGaQ",
+    "ChIJCZ1kyLz92oARMY5MhAxZzOw",
+    "ChIJHfUK1F352oARRmafuSeVEdw",
+    "ChIJH-owLewb24ARbCJRzdNGlYs",
+    "ChIJMa1DRHr-2oARokTfcUYZeG8",
+    "ChIJ0daDZl752oARuxk894hXBNc",
+    "ChIJxQrR1XYb24ARPhhAph3x-3E",
+    "ChIJG00JhC4d24ARRbl1wodOjBI",
+    "ChIJ54OpGaUb24ARFDRv4gp4cX8",
+    "ChIJUY0dTAgb24AROXhia2qSBOE",
+    "ChIJ2RG2BkGVwoARyO9ezSXNlj0",
+    "ChIJ07byuEG3woARb5cCmQwzgrI",
+    "ChIJtx3cF-fHwoARXcs0Gavg16o",
+    "ChIJe79q9ke6woARGqmCtTFiURQ",
+    "ChIJbZuIHMys3oAR0UhQWhTAk2k",
+    "ChIJg0Fh6zp13IARjItMpENbxiQ",
+    "ChIJaYf6X_Yn24ARbjdxd9-Ni_E"
+];
