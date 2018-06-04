@@ -11,7 +11,8 @@ var require = {
         "text":             "../node_modules/requirejs-text/text",
         "jquery":           "https://code.jquery.com/jquery-2.2.4.min",
         "jquery.bootstrap": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min",
-        "cities":           "models/cities/cities"
+        "cities":           "models/cities/cities",
+        "extenders":        "app/extenders"
     },
     shim: {
         "jquery.bootstrap": {

@@ -68,7 +68,7 @@ define(['knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.html'], func
 
         this.setCurrentShop = function (selected){
             self.currentShop(selected);
-            console.log('howdy');
+
             var request = {placeId: self.currentShop().placeId()};
 
             service = new google.maps.places.PlacesService(map);
@@ -79,7 +79,7 @@ define(['knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.html'], func
                 }
                 if(status == google.maps.places.PlacesServiceStatus.OK) {
                     self.shopResult(result);
-                    console.log((self.shopResult()));
+
                     $('.nav-tabs a[href="#store-detail"]').tab('show');
                 }
             });
@@ -173,6 +173,7 @@ define(['knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.html'], func
             });
         }
     }
+
 
     return {viewModel: MainMap, template: templateMarkup};
 

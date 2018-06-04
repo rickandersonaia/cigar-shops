@@ -1,10 +1,10 @@
-define(['knockout', 'jquery',  'jquery.bootstrap', 'text!./app.html'], function(ko, $, bs, template) {
+define(['knockout', 'jquery', 'jquery.bootstrap', 'text!./app.html'], function (ko, $, bs, template) {
 
-  function App(params) {
-    // This viewmodel doesn't do anything except pass through the 'route' parameter to the view.
-    this.route = params.route;
+    function App(params) {
+        // This viewmodel doesn't do anything except pass through the 'route' parameter to the view.
+        this.route = params.route;
 
-  }
+    }
 
-  return { viewModel: App, template: template };
+    return {viewModel: App, template: template};
 });

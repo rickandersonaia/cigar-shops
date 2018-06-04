@@ -1,7 +1,14 @@
 <div data-bind="if: shopDetails().name">
     <h2 data-bind='text: shopDetails().name'></h2>
 
+    <!--<p data-bind='text: placeData()'></p>-->
     <p data-bind='text: message'></p>
+    <div data-bind="component:{
+                        name: 'image-from-google',
+                        params: { placeData: placeData()}
+                    }">
+    </div>
+
 
 </div>
 
