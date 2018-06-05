@@ -71,7 +71,14 @@ define(['ignore', 'knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.ht
         this.setCurrentShop = function (selected){
             self.currentShop(selected);
 
-            var request = {placeId: self.currentShop().placeId()};
+            // this function is called from multiple locations and selected returns different types of objects
+            // the test below determines which type of object so it can set the right type of request.
+            
+            if (selected.hasOwnProperty('place_id')) {
+                var request = {placeId: selected.place_id};
+            }else{
+                var request = {placeId: self.currentShop().placeId()};
+            }
 
             service = new google.maps.places.PlacesService(map);
             service.getDetails(request, function (result, status) {

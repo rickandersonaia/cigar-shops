@@ -15,12 +15,12 @@ define(['knockout', 'text!./favorite-view.html'], function (ko, templateMarkup) 
         this.addToFavorites = function () {
             favoritesList.push(self.shopDetails().place_id);
             localStorage.setItem('cigarStoreFavoritesList', JSON.stringify(favoritesList))
-        }
+        };
 
         this.addToIgnore = function () {
             ignoreList.push(self.shopDetails().place_id);
             localStorage.setItem('cigarStoreIgnoreList', JSON.stringify(ignoreList))
-        }
+        };
     }
 
 
