@@ -25,11 +25,13 @@ define(['knockout', 'text!./yelp-details.html'], function (ko, templateMarkup) {
             };
             $.ajax(requestObj)
                 .done(function (response) {
-                    self.yelpBusinessDetails( response.businesses[0]);
+                    if(Array.isArray(response.businesses) && response.businesses.length){
+                        self.yelpBusinessDetails( response.businesses[0]);
+                    }
                 });
         }, this).extend({ deferred: true });
 
-        this.shopYelpId = ko.observable(self.yelpBusinessDetails.id);
+        // this.shopYelpId = ko.observable(self.yelpBusinessDetails.id);
     }
 
     return {viewModel: YelpDetails, template: templateMarkup};

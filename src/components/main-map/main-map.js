@@ -131,7 +131,7 @@ define(['ignore', 'knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.ht
         this.placesServiceCalback = function(results, status) {
             if (status == google.maps.places.PlacesServiceStatus.OK) {
 
-                var goodResults = [{}];
+                var goodResults = [];
                 var ignoreList = localStorage.getItem('cigarStoreIgnoreList')
                     ? JSON.parse(localStorage.getItem('cigarStoreIgnoreList')) : [];
 
