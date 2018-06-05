@@ -90,7 +90,6 @@ define(['ignore', 'knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.ht
         };
 
         this.getShopPhotos = function(place){
-
             var photos = place.photos;
             if (!photos) {
                 return;

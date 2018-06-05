@@ -1,0 +1,24 @@
+<h2>Your favorite cigar stores</h2>
+
+<div data-bind="if: favoriteStores()">
+    <p data-bind='text: message'></p>
+    <!-- ko foreach: { data: favoriteStores(), as: 'shop'} -->
+    <div class="store-box row">
+        <div class="col-md-3">
+            <img data-bind="attr: { src: shop.imageUrl }">
+        </div>
+        <div class="col-md-9">
+            <h3 data-bind="text: shop.name"></h3>
+            <p data-bind="text: shop.vicinity"></p>
+            <p data-bind="text: shop.formatted_phone_number"></p>
+            <button type="button" data-bind="click: $parents[1].setCurrentShop"> View the store's full details</button>
+        </div>
+    </div>
+
+    <!-- /ko -->
+</div>
+
+<div data-bind="ifnot: favoriteStores">
+    <p>You haven't selected any favorites yet</p>
+</div>
+

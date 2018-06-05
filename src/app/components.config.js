@@ -9,14 +9,10 @@
     components: [
         // [Scaffolded components will be inserted here. To retain this feature, don't remove this comment.]
         
+		{ name: 'favorite-list-view', path: 'components/favorite-list-view/favorite-list-view' },
 		{ name: 'favorite-view', path: 'components/favorite-view/favorite-view' },
-        
-		{ name: 'yelp-reviews', path: 'components/yelp-reviews/yelp-reviews' },
-        
 		{ name: 'yelp-details', path: 'components/yelp-details/yelp-details' },
-
         { name: 'detail-view', path: 'components/detail-view/detail-view' },
-		{ name: 'card-view', path: 'components/card-view/card-view' },
 		{ name: 'side-list', path: 'components/side-list/side-list' },
 		{ name: 'test', path: 'components/test/test' },
 		{ name: 'main-map', path: 'components/main-map/main-map' },
