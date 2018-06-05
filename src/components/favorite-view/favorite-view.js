@@ -5,21 +5,23 @@ define(['knockout', 'text!./favorite-view.html'], function (ko, templateMarkup) 
 
         this.message = ko.observable('Hello from the favorite-view component!');
         this.shopDetails = params.shopDetails;
-
-        var favoritesList = localStorage.getItem('cigarStoreFavoritesList')
-            ? JSON.parse(localStorage.getItem('cigarStoreFavoritesList')) : [];
+        this.favoritesList = params.favoritesList;
 
         var ignoreList = localStorage.getItem('cigarStoreIgnoreList')
             ? JSON.parse(localStorage.getItem('cigarStoreIgnoreList')) : [];
 
         this.addToFavorites = function () {
-            favoritesList.push(self.shopDetails().place_id);
-            localStorage.setItem('cigarStoreFavoritesList', JSON.stringify(favoritesList))
+            if(self.favoritesList().indexOf(self.shopDetails().place_id) < 0){
+                self.favoritesList().push(self.shopDetails().place_id);
+                localStorage.setItem('cigarStoreFavoritesList', JSON.stringify(self.favoritesList()));
+                $('.nav-tabs a[href="#cards"]').tab('show');
+            }
         };
 
         this.addToIgnore = function () {
             ignoreList.push(self.shopDetails().place_id);
-            localStorage.setItem('cigarStoreIgnoreList', JSON.stringify(ignoreList))
+            localStorage.setItem('cigarStoreIgnoreList', JSON.stringify(ignoreList));
+            $('.nav-tabs a[href="#map"]').tab('show');
         };
     }
 

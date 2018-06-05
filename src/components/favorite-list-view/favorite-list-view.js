@@ -1,4 +1,4 @@
-define(['knockout', 'text!./favorite-list-view.html'], function (ko, templateMarkup) {
+define(['knockout', 'ls-change', 'text!./favorite-list-view.html'], function (ko, lsc, templateMarkup) {
 
 
     function FavoriteListView(params) {
@@ -6,12 +6,11 @@ define(['knockout', 'text!./favorite-list-view.html'], function (ko, templateMar
 
         this.message = ko.observable('Hello from the favorite-list-view component!');
         this.favoriteStores = ko.observableArray();
+        this.favoritesExist = ko.observable(false);
+        this.favoritesList = params.favoritesList;
 
-        favoritesList = localStorage.getItem('cigarStoreFavoritesList')
-            ? JSON.parse(localStorage.getItem('cigarStoreFavoritesList')) : [];
-
-        for (index = 0; index < favoritesList.length; index++) {
-            var request = {placeId: favoritesList[index]};
+        for (favorite of self.favoritesList()) {
+            var request = {placeId: favorite};
 
             service = new google.maps.places.PlacesService(map);
             service.getDetails(request, function (result, status) {
@@ -25,7 +24,7 @@ define(['knockout', 'text!./favorite-list-view.html'], function (ko, templateMar
                         var imageUrl = photos[0].getUrl({maxWidth: 200, maxHeight: 200});
                         result.imageUrl = imageUrl;
                     }
-
+                    self.favoritesExist(true);
                     self.favoriteStores.push(result);
 
                 }

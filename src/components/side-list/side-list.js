@@ -4,6 +4,7 @@ define(['knockout', 'text!./side-list.html'], function (ko, templateMarkup) {
         var self = this;
         this.message = ko.observable('Hello from the side-list component!');
         this.shopList = params.shopList;
+        this.favoritesList = params.favoritesList;
     }
 
 

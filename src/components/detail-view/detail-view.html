@@ -5,7 +5,10 @@
         <div class="favorites">
             <div data-bind="component:{
                         name: 'favorite-view',
-                        params: { shopDetails: shopDetails}
+                        params: {
+                            shopDetails: shopDetails,
+                            favoritesList: favoritesList
+                        }
                     }">
             </div>
         </div>

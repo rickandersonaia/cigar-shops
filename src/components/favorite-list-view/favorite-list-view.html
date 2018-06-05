@@ -1,6 +1,6 @@
 <h2>Your favorite cigar stores</h2>
 
-<div data-bind="if: favoriteStores()">
+<div data-bind="if: favoritesExist()">
     <p data-bind='text: message'></p>
     <!-- ko foreach: { data: favoriteStores(), as: 'shop'} -->
     <div class="store-box row">
@@ -18,7 +18,7 @@
     <!-- /ko -->
 </div>
 
-<div data-bind="ifnot: favoriteStores">
-    <p>You haven't selected any favorites yet</p>
+<div data-bind="ifnot: favoritesExist()">
+    <p>You haven't selected any favorites yet.  You can add a store to your favorites from the store detail view</p>
 </div>
 

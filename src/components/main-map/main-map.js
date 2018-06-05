@@ -23,6 +23,8 @@ define(['ignore', 'knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.ht
         this.shopResult = ko.observableArray();
         this.shopPhotos = ko.observableArray();
         this.shopPhoto = ko.observable();
+        this.favoritesList = ko.observableArray(localStorage.getItem('cigarStoreFavoritesList')
+            ? JSON.parse(localStorage.getItem('cigarStoreFavoritesList')) : []);
 
         // cityData is the initial JSON data (model) that contains the parameters of the 3
         // cities in question.  Here we read the JSON file and set observables based on
@@ -73,7 +75,7 @@ define(['ignore', 'knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.ht
 
             // this function is called from multiple locations and selected returns different types of objects
             // the test below determines which type of object so it can set the right type of request.
-            
+
             if (selected.hasOwnProperty('place_id')) {
                 var request = {placeId: selected.place_id};
             }else{
@@ -203,6 +205,12 @@ define(['ignore', 'knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.ht
                     });
                 });
             });
+        };
+
+        this.addToFavoritesList = function (selected) {
+            console.log('clicked');
+            console.log(selected);
+            // self.favoritesList.push(selected.place_id);
         }
     }
 

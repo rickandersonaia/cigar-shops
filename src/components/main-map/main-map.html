@@ -14,17 +14,23 @@
         <div class="tab-content">
             <div id="map" class="tab-pane fade in active"></div>
             <div id="cards" class="tab-pane fade">
-                <favorite-list-view></favorite-list-view>
+                <div data-bind="component:{
+                        name: 'favorite-list-view',
+                        params: {
+                            favoritesList: favoritesList
+                        }
+                    }">
+                </div>
             </div>
             <div id="store-detail" class="tab-pane fade">
                 <div data-bind="component:{
                         name: 'detail-view',
                         params: {
                             shopDetails: shopResult,
-                            shopPhoto: shopPhoto
+                            shopPhoto: shopPhoto,
+                            favoritesList: favoritesList
                         }
                     }">
-
                 </div>
             </div>
         </div>
@@ -32,7 +38,10 @@
     <div class="col-md-3 col-md-pull-9">
         <div data-bind="component:{
             name: 'side-list',
-            params: { shopList: shopList}
+            params: {
+            shopList: shopList,
+            favoritesList: favoritesList
+            }
         }">
 
         </div>
