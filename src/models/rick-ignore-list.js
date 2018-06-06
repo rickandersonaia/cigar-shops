@@ -18,5 +18,6 @@ var rickIgnoreList = [
     "ChIJe79q9ke6woARGqmCtTFiURQ",
     "ChIJbZuIHMys3oAR0UhQWhTAk2k",
     "ChIJg0Fh6zp13IARjItMpENbxiQ",
-    "ChIJaYf6X_Yn24ARbjdxd9-Ni_E"
+    "ChIJaYf6X_Yn24ARbjdxd9-Ni_E",
+    "ChIJ2T7LpOOq3oARFMmuUkOeZYw"
 ];

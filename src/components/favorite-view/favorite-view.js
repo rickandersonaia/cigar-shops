@@ -15,13 +15,14 @@ define(['knockout', 'text!./favorite-view.html'], function (ko, templateMarkup) 
                 self.favoritesList().push(self.shopDetails().place_id);
                 localStorage.setItem('cigarStoreFavoritesList', JSON.stringify(self.favoritesList()));
                 $('.nav-tabs a[href="#cards"]').tab('show');
+                window.location.reload();
             }
         };
 
         this.addToIgnore = function () {
             ignoreList.push(self.shopDetails().place_id);
             localStorage.setItem('cigarStoreIgnoreList', JSON.stringify(ignoreList));
-            $('.nav-tabs a[href="#map"]').tab('show');
+            window.location.reload();
         };
     }
 

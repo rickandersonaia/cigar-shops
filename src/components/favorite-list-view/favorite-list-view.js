@@ -1,4 +1,4 @@
-define(['knockout', 'ls-change', 'text!./favorite-list-view.html'], function (ko, lsc, templateMarkup) {
+define(['knockout', 'text!./favorite-list-view.html'], function (ko, templateMarkup) {
 
 
     function FavoriteListView(params) {
@@ -9,7 +9,7 @@ define(['knockout', 'ls-change', 'text!./favorite-list-view.html'], function (ko
         this.favoritesExist = ko.observable(false);
         this.favoritesList = params.favoritesList;
 
-        for (favorite of self.favoritesList()) {
+        ko.utils.arrayForEach(self.favoritesList(), function(favorite) {
             var request = {placeId: favorite};
 
             service = new google.maps.places.PlacesService(map);
@@ -29,7 +29,7 @@ define(['knockout', 'ls-change', 'text!./favorite-list-view.html'], function (ko
 
                 }
             });
-        }
+        });
     }
 
 

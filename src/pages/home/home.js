@@ -1,13 +1,14 @@
-define(["knockout", "text!./home.html"], function(ko, homeTemplate) {
+define(["knockout", "text!./home.html"], function (ko, homeTemplate) {
 
-  function HomeViewModel(route) {
-    this.message = ko.observable('Select a city below to see the best cigar shops there.');
-  }
+    function HomeViewModel(route) {
+        this.message = ko.observable('Select a city below to see the best cigar shops there.');
 
-  HomeViewModel.prototype.doSomething = function() {
-    this.message('You invoked doSomething() on the viewmodel.');
-  };
+    }
 
-  return { viewModel: HomeViewModel, template: homeTemplate };
+    HomeViewModel.prototype.doSomething = function () {
+        this.message('You invoked doSomething() on the viewmodel.');
+    };
+
+    return {viewModel: HomeViewModel, template: homeTemplate};
 
 });
