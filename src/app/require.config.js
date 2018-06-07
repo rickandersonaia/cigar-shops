@@ -11,8 +11,8 @@ var require = {
         "signals":          "../node_modules/signals/dist/signals.min",
         "text":             "../node_modules/requirejs-text/text",
         "ls-change":        "models/global-variables",
-        "jquery":           "https://code.jquery.com/jquery-2.2.4.min",
-        "jquery.bootstrap": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min",
+        // "jquery":           "https://code.jquery.com/jquery-2.2.4.min",
+        // "jquery.bootstrap": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min",
         "extenders":        "app/extenders"
     },
     shim: {

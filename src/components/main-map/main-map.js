@@ -1,4 +1,4 @@
-define(['ignore', 'knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.html'], function (ig, ko, $, bs, templateMarkup) {
+define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templateMarkup) {
     var City = function (data) {
         this.id = ko.observable(data.id);
         this.name = ko.observable(data.name);
@@ -30,7 +30,7 @@ define(['ignore', 'knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.ht
         // cities in question.  Here we read the JSON file and set observables based on
         // success or failure
 
-        var cityData = $.getJSON("components/main-map/main-map-model.json", function (data) {
+        var cityData = $.getJSON("main-map-model.json", function (data) {
             console.log('Successfully read city data from JSON file');
         });
 
@@ -49,14 +49,13 @@ define(['ignore', 'knockout', 'jquery',  'jquery.bootstrap', 'text!./main-map.ht
 
         // Do this upon failure to read of JSON file
         cityData.fail(function () {
-            console.log('Failed to read city data from JSON file')
+            console.log('Failed to read city data from JSON file');
             var defaultCity = {
                 "name": "Palm Springs",
                 "lat": "33.7667",
                 "lng": "-116.3592",
                 "zoom": 10
             };
-
             location = new google.maps.LatLng(defaultCity.lat, defaultCity.lng);
             self.currentCityMap(location, defaultCity.zoom);
             self.message(defaultCity.name + " Cigar Stores");
