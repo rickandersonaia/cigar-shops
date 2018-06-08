@@ -25,7 +25,7 @@ define(['knockout', 'text!./yelp-details.html'], function (ko, templateMarkup) {
             };
             $.ajax(requestObj)
                 .done(function (response) {
-                    if(Array.isArray(response.businesses) && response.businesses.length){
+                    if(Array.isArray(response.businesses[0]) && response.businesses[0].length){
                         self.yelpBusinessDetails( response.businesses[0]);
                     }
                 });

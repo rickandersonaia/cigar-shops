@@ -7,7 +7,7 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
         this.zoom = ko.observable(data.zoom);
     };
 
-    var Place = function (data){
+    var Place = function (data) {
         this.placeId = ko.observable(data.place_id);
         this.placeName = ko.observable(data.name);
     };
@@ -31,12 +31,12 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
         // success or failure
 
         var cityData = $.getJSON("main-map-model.json", function (data) {
-            console.log('Successfully read city data from JSON file');
+            // console.log('Successfully read city data from JSON file');
         });
 
         // Do this on successful reading of JSON file
         cityData.done(function (data) {
-            for ( element in data) {
+            for (element in data) {
                 self.cityList.push(new City(data[element]));
             }
 
@@ -67,9 +67,10 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
             city = new google.maps.LatLng(self.currentCity().lat(), self.currentCity().lng());
             self.currentCityMap(city, self.currentCity().zoom());
             self.message(self.currentCity().name() + " Cigar Stores");
+            $('.nav-tabs a[href="#map"]').tab('show');
         };
 
-        this.setCurrentShop = function (selected){
+        this.setCurrentShop = function (selected) {
             self.currentShop(selected);
 
             // this function is called from multiple locations and selected returns different types of objects
@@ -77,7 +78,7 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
 
             if (selected.hasOwnProperty('place_id')) {
                 var request = {placeId: selected.place_id};
-            }else{
+            } else {
                 var request = {placeId: self.currentShop().placeId()};
             }
 
@@ -87,30 +88,32 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
                     console.error(status);
                     return;
                 }
-                if(status == google.maps.places.PlacesServiceStatus.OK) {
+                if (status == google.maps.places.PlacesServiceStatus.OK) {
                     self.shopResult(result);
                     self.getShopPhotos(result);
 
                     $('.nav-tabs a[href="#store-detail"]').tab('show');
+
+                    console.log(result);
                 }
             });
 
         };
 
-        this.getShopPhotos = function(place){
+        this.getShopPhotos = function (place) {
             var photos = place.photos;
             if (!photos) {
                 return;
             }
             self.shopPhoto(photos[0].getUrl({maxWidth: 640}));
             var index;
-            for(index=0; index < photos.length; index++){
+            for (index = 0; index < photos.length; index++) {
                 shopPhoto = photos[index].getUrl({maxWidth: 640});
                 self.shopPhotos.push(shopPhoto);
             }
         }
 
-        this.currentCityMap = function(city, zoomVal) {
+        this.currentCityMap = function (city, zoomVal) {
             map = new google.maps.Map(document.getElementById('map'), {
                 center: city,
                 zoom: zoomVal,
@@ -136,7 +139,7 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
         };
 
 
-        this.placesServiceCalback = function(results, status) {
+        this.placesServiceCalback = function (results, status) {
             if (status == google.maps.places.PlacesServiceStatus.OK) {
 
                 var goodResults = [];
@@ -144,12 +147,12 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
                     ? JSON.parse(localStorage.getItem('cigarStoreIgnoreList')) : [];
 
                 for (var i = 0; i < results.length; i++) {
-                    if ( ignoreList.includes( results[i].place_id ) || rickIgnoreList.includes(results[i].place_id)){
+                    if (ignoreList.includes(results[i].place_id) || rickIgnoreList.includes(results[i].place_id)) {
                         continue;
                     }
                     var place = results[i];
                     self.addMarker(place);
-                    goodResults.push( results[i]);
+                    goodResults.push(results[i]);
                 }
 
                 self.shopList(self.createShopList(goodResults));
@@ -157,25 +160,25 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
         };
 
 
-        this.createShopList = function(placesResults){
+        this.createShopList = function (placesResults) {
             shopList = [];
-            for ( place in placesResults) {
+            for (place in placesResults) {
                 shopList.push(new Place(placesResults[place]));
             }
             return shopList;
         };
 
 
-        this.addMarker = function(place) {
+        this.addMarker = function (place) {
             var marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location
             });
 
-            google.maps.event.addListener(marker, 'click', function() {
+            google.maps.event.addListener(marker, 'click', function () {
                 var request = {placeId: place.place_id};
 
-                service.getDetails(request, function(result, status) {
+                service.getDetails(request, function (result, status) {
                     if (status !== google.maps.places.PlacesServiceStatus.OK) {
                         console.error(status);
                         return;
@@ -183,9 +186,9 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
 
                     self.shopResult(result);
 
-                    if(result.opening_hours.open_now){
+                    if (result.opening_hours.open_now) {
                         var open = '<span class="open">Open Now</span>'
-                    }else{
+                    } else {
                         var open = '<span class="closed">Closed</span>'
                     }
 
@@ -193,13 +196,13 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
                         '<p>' + result.vicinity + '</p>' +
                         '<p>' + result.formatted_phone_number + '</p>' +
                         '<p> Rating: ' + result.rating + ' of 5</p>' +
-                        '<p class="info-window-footer">' + open + '<button id="more-details">More details</button></p>';
+                        '<p class="info-window-footer">' + open + '<button class="btn btn-primary" id="more-details">More details</button></p>';
 
                     infoWindow.setContent(content);
 
                     infoWindow.open(map, marker);
 
-                    $('#more-details').click( function (){
+                    $('#more-details').click(function () {
                         $('.nav-tabs a[href="#store-detail"]').tab('show');
                     });
                 });
@@ -209,7 +212,16 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
         this.addToFavoritesList = function (selected) {
             console.log('clicked');
             console.log(selected);
-            // self.favoritesList.push(selected.place_id);
+        };
+
+        this.buildSmallMap = function (place) {
+            var smallmap = new google.maps.Map(document.getElementById('small-map'), {
+                zoom: 15,
+                center: place.geometry.location,
+                mapTypeControl: false,
+                panControl: false
+            });
+            var marker = new google.maps.Marker({position: place.geometry.location, map: smallmap});
         }
     }
 

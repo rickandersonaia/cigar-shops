@@ -9,6 +9,10 @@
     components: [
         // [Scaffolded components will be inserted here. To retain this feature, don't remove this comment.]
         
+		{ name: 'footer-bar', path: 'components/footer-bar/footer-bar' },
+        
+		{ name: 'footer', path: 'components/footer/footer' },
+        
 		{ name: 'favorite-list-view', path: 'components/favorite-list-view/favorite-list-view' },
 		{ name: 'favorite-view', path: 'components/favorite-view/favorite-view' },
 		{ name: 'yelp-details', path: 'components/yelp-details/yelp-details' },

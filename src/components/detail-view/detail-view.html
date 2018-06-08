@@ -17,6 +17,13 @@
         <div class="google-details col-md-6">
             <h3>From Google</h3>
             <p data-bind="text: shopDetails().vicinity"></p>
+            <p class="phone">
+                <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+                <a data-bind="attr: {url: shopDetails().vicinity}">
+                    <span data-bind="text: shopDetails().formatted_phone_number"></span>
+                </a>
+            </p>
+
         </div>
         <div class="yelp-details col-md-6">
             <div data-bind="component:{
@@ -24,6 +31,7 @@
                         params: { shopDetails: shopDetails}
                     }">
             </div>
+            <div id="small-map"></div>
         </div>
 
     </div>
