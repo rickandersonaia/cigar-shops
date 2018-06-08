@@ -202,7 +202,7 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
 
                     infoWindow.open(map, marker);
 
-                    $('#more-details').click(function () {
+                    $('#more-details').click( function (){
                         $('.nav-tabs a[href="#store-detail"]').tab('show');
                     });
                 });
@@ -212,16 +212,7 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
         this.addToFavoritesList = function (selected) {
             console.log('clicked');
             console.log(selected);
-        };
-
-        this.buildSmallMap = function (place) {
-            var smallmap = new google.maps.Map(document.getElementById('small-map'), {
-                zoom: 15,
-                center: place.geometry.location,
-                mapTypeControl: false,
-                panControl: false
-            });
-            var marker = new google.maps.Marker({position: place.geometry.location, map: smallmap});
+            // self.favoritesList.push(selected.place_id);
         }
     }
 
