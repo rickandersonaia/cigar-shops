@@ -7,12 +7,14 @@
 <div class="row">
     <div class="col-md-9 col-md-push-3">
         <ul class="nav nav-tabs">
-            <li class="active" role="presentation"><a data-toggle="tab" href="#map">Map</a></li>
+            <li class="active" role="presentation"><a data-toggle="tab" href="#map-tab">Map</a></li>
             <li role="presentation"><a data-toggle="tab" href="#cards">Favorites</a></li>
             <li role="presentation"><a data-toggle="tab" href="#store-detail">Store Detail</a></li>
         </ul>
         <div class="tab-content">
-            <div id="map" class="tab-pane fade in active"></div>
+            <div id="map-tab" class="tab-pane fade in active">
+                <div id="map"></div>
+            </div>
             <div id="cards" class="tab-pane fade">
                 <div data-bind="component:{
                         name: 'favorite-list-view',

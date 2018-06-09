@@ -5,7 +5,7 @@
         <span data-bind="text: yelpBusinessDetails().rating"></span> star rating with
         <span data-bind="text: yelpBusinessDetails().review_count"></span> reviews.
     </p>
-    <p><a data-bind="attr: {href: yelpBusinessDetails().url}"> Read the Yelp Reviews</a></p>
+    <p><a class="btn btn-danger" data-bind="attr: {href: yelpBusinessDetails().url}" target="_blank"> Read the Yelp Reviews</a></p>
 </div>
 
 <div data-bind="ifnot: yelpBusinessDetails().name">

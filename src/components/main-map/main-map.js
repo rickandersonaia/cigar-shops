@@ -67,19 +67,19 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
             city = new google.maps.LatLng(self.currentCity().lat(), self.currentCity().lng());
             self.currentCityMap(city, self.currentCity().zoom());
             self.message(self.currentCity().name() + " Cigar Stores");
-            $('.nav-tabs a[href="#map"]').tab('show');
+            $('.nav-tabs a[href="#map-tab"]').tab('show');
         };
 
         this.setCurrentShop = function (selected) {
             self.currentShop(selected);
-
+            var request;
             // this function is called from multiple locations and selected returns different types of objects
             // the test below determines which type of object so it can set the right type of request.
 
             if (selected.hasOwnProperty('place_id')) {
-                var request = {placeId: selected.place_id};
+                request = {placeId: selected.place_id};
             } else {
-                var request = {placeId: self.currentShop().placeId()};
+                request = {placeId: self.currentShop().placeId()};
             }
 
             service = new google.maps.places.PlacesService(map);
@@ -93,8 +93,6 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
                     self.getShopPhotos(result);
 
                     $('.nav-tabs a[href="#store-detail"]').tab('show');
-
-                    console.log(result);
                     self.getSmallMap(result);
                 }
             });
@@ -115,6 +113,7 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
         }
 
         this.currentCityMap = function (city, zoomVal) {
+
             map = new google.maps.Map(document.getElementById('map'), {
                 center: city,
                 zoom: zoomVal,

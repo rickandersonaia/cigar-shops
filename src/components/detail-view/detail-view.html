@@ -1,7 +1,14 @@
 <div data-bind="if: shopDetails().name">
     <header class="detail-view">
+        <!-- ko if: shopPhoto -->
         <img data-bind="attr: {src: shopPhoto, alt: shopDetails().name}">
+        <!-- /ko -->
+        <!-- ko ifnot: shopPhoto -->
+        <img src="./images/cigar-default.jpg" data-bind="attr: {alt: shopDetails().name}">
+        <!-- /ko -->
         <h2 data-bind='text: shopDetails().name'></h2>
+    </header>
+    <div class="row">
         <div class="favorites">
             <div data-bind="component:{
                         name: 'favorite-view',
@@ -12,14 +19,12 @@
                     }">
             </div>
         </div>
-    </header>
-    <div class="row">
         <div class="google-details col-md-6">
             <h3>From Google</h3>
             <p data-bind="text: shopDetails().vicinity"></p>
             <p class="phone">
                 <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
-                <a data-bind="attr: {url: shopDetails().vicinity}">
+                <a data-bind="attr: {url: shopDetails().international_phone_number}">
                     <span data-bind="text: shopDetails().formatted_phone_number"></span>
                 </a>
             </p>
@@ -46,7 +51,7 @@
                             data-bind="text: review.relative_time_description"></span></p>
                     <img data-bind="attr: {src: profile_photo_url}" width="50px" class="align-left">
                     <p data-bind="text: review.text"></p>
-                    <p><a data-bind="attr: {url: review.author_url}"><em data-bind="text: review.author_name"></em></a>
+                    <p><a data-bind="attr: {href: review.author_url}" target="_blank"><em data-bind="text: review.author_name"></em></a>
                     </p>
                 </div>
                 <!-- /ko -->
