@@ -23,6 +23,34 @@
                     <span data-bind="text: shopDetails().formatted_phone_number"></span>
                 </a>
             </p>
+            <div class="opening-hours">
+                <h4>
+                    <!-- ko if: shopDetails().opening_hours.open_now -->
+                    <span class="open">Open Now</span>
+                    <!-- /ko -->
+                    <!-- ko if: !shopDetails().opening_hours.open_now -->
+                    <span class="closed">Closed Now</span>
+                    <!-- /ko -->
+                </h4>
+                <p>Hours of operation</p>
+                <ul data-bind="foreach: shopDetails().opening_hours.weekday_text">
+                    <li data-bind="text: $data"></li>
+                </ul>
+            </div>
+            <div class="reviews">
+                <h3>Google Reviews Rating: <span data-bind="text: shopDetails().rating"></span> Stars</h3>
+                <p><b>Recent Reviews</b></p>
+                <!-- ko foreach: { data: shopDetails().reviews, as: 'review' } -->
+                <div class="review-box clearfix">
+                    <p><b>Rating: <span data-bind="text: review.rating"></span> stars</b> - <span
+                            data-bind="text: review.relative_time_description"></span></p>
+                    <img data-bind="attr: {src: profile_photo_url}" width="50px" class="align-left">
+                    <p data-bind="text: review.text"></p>
+                    <p><a data-bind="attr: {url: review.author_url}"><em data-bind="text: review.author_name"></em></a>
+                    </p>
+                </div>
+                <!-- /ko -->
+            </div>
 
         </div>
         <div class="yelp-details col-md-6">

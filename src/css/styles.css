@@ -1,6 +1,10 @@
 img {
 	max-width: 100%;
 }
+img.align-left {
+	float: left;
+	margin: 0 10px 10px 0;
+}
 #page {
 	margin-top: 80px;
 }

@@ -178,7 +178,7 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
 
             google.maps.event.addListener(marker, 'click', function () {
                 var request = {placeId: place.place_id};
-
+                marker.setIcon("https://maps.google.com/mapfiles/kml/pal4/icon47.png");
                 service.getDetails(request, function (result, status) {
                     if (status !== google.maps.places.PlacesServiceStatus.OK) {
                         console.error(status);
@@ -223,7 +223,11 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
                 mapTypeControl: false,
                 panControl: false
             });
-            var marker = new google.maps.Marker({position: place.geometry.location, map: smallmap});
+            var marker = new google.maps.Marker({
+                position: place.geometry.location,
+                map: smallmap,
+                icon: "https://maps.google.com/mapfiles/kml/pal4/icon47.png"
+            });
         };
     }
 
