@@ -95,6 +95,7 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
                     $('.nav-tabs a[href="#store-detail"]').tab('show');
 
                     console.log(result);
+                    self.getSmallMap(result);
                 }
             });
 
@@ -214,6 +215,16 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
             console.log(selected);
             // self.favoritesList.push(selected.place_id);
         }
+
+       this.getSmallMap = function (place) {
+            var smallmap = new google.maps.Map(document.getElementById('small-map'), {
+                zoom: 15,
+                center: place.geometry.location,
+                mapTypeControl: false,
+                panControl: false
+            });
+            var marker = new google.maps.Marker({position: place.geometry.location, map: smallmap});
+        };
     }
 
 

@@ -4,8 +4,6 @@
     <list default="true" id="c61ede75-f301-434a-8a91-415450abdec4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/main-map/main-map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-map/main-map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/yelp-details/yelp-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/yelp-details/yelp-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/yelp-details/yelp-details.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/yelp-details/yelp-details.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -59,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/detail-view/detail-view.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="726">
-              <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+              <caret line="33" column="38" lean-forward="true" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -67,35 +65,17 @@
       <file leaf-file-name="detail-view.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/detail-view/detail-view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            <state relative-caret-position="176">
+              <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main-map.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main-map.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="185" lean-forward="true" selection-start-line="185" selection-end-line="185" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="yelp-details.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/yelp-details/yelp-details.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="18" column="59" lean-forward="true" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="yelp-details.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/yelp-details/yelp-details.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+            <state relative-caret-position="587">
+              <caret line="97" column="45" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -180,8 +160,8 @@
         <option value="$PROJECT_DIR$/src/css/styles.css" />
         <option value="$PROJECT_DIR$/src/components/detail-view/detail-view.html" />
         <option value="$PROJECT_DIR$/src/components/yelp-details/yelp-details.js" />
-        <option value="$PROJECT_DIR$/src/components/detail-view/detail-view.js" />
         <option value="$PROJECT_DIR$/src/components/yelp-details/yelp-details.html" />
+        <option value="$PROJECT_DIR$/src/components/detail-view/detail-view.js" />
         <option value="$PROJECT_DIR$/src/components/main-map/main-map.js" />
       </list>
     </option>
@@ -384,7 +364,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259946000" />
+    <option name="totallyTimeSpent" value="260701000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -718,27 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/detail-view/detail-view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="185" lean-forward="true" selection-start-line="185" selection-end-line="185" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/detail-view/detail-view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/app/app.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -753,6 +712,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/yelp-details/yelp-details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/yelp-details/yelp-details.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -760,10 +726,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/yelp-details/yelp-details.html">
+    <entry file="file://$PROJECT_DIR$/src/components/detail-view/detail-view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+        <state relative-caret-position="726">
+          <caret line="33" column="38" lean-forward="true" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/detail-view/detail-view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/main-map/main-map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="97" column="45" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
         </state>
       </provider>
     </entry>
