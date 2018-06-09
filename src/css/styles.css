@@ -113,6 +113,10 @@ p.spinner{
 .store-box h3{
 	margin-top:0;
 }
+.post-box{
+	font-size:16px;
+	line-height:27px;
+}
 
 
 @media (max-width: 415px) {
@@ -122,5 +126,9 @@ p.spinner{
 		float:none;
 		clear:both;
 		text-align: center;
+	}
+	.post-box{
+		font-size:15px;
+		line-height:25px;
 	}
 }

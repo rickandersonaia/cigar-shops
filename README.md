@@ -35,13 +35,20 @@ Unfortunately Yelp no longers supports the client-side only JavaScript API - for
 of backend server for making GET requests. It uses a tokenized response that includes a client id and an api key.  From there
 the backend communication creates an authentication token that is used in the requests.
 
-As this project was not intended to include any sort of backend "server" I have had to use a hack that simumlates a backend
-request by using PostMan to create the token.  Unfortunately the token expires after roughly 7 days.  One then needs to use
-PostMan to create a new token.
+As this project was not intended to include any sort of backend "server" I have had to use a hack that simulates a backend
+request by using PostMan to create the token.
 
 It's either that or build out a backend.
 
-I got this idea from a YouTube video by Greg Sandell - https://www.youtube.com/watch?v=0Sy14hX8T-A&t=391s.
+I got this idea from a YouTube video by Greg Sandell - https://www.youtube.com/watch?v=0Sy14hX8T-A&t=391s.  His solution
+no longer works with V3 but it gets close enough that I was able to figure it out.
+
+## Live Site Deployment
+
+Gulp creates a `dist` folder with minified and concatenated HTML, JS & CSS.  In order to update the `dist` folder simply
+run `gulp` from within the `cigar-shops` directory.
+
+This site is running on an AWS Lightsail instance that I configured as part of this course.
 
 
 
