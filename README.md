@@ -3,7 +3,7 @@
 This project was developed for the "Neighborhood Map" in the Udacity Full Stack Web Development Course.  It creates a
 an application that shows real cigar stores in Southern California
 
-https://cigarshops.info
+[The site is live at https://cigarshops.info](https://cigarshops.info)
 
 ## Project description
 
