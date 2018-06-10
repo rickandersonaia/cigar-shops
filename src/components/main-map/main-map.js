@@ -1,4 +1,4 @@
-define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templateMarkup) {
+define(['ignore', 'favorites', 'knockout', 'text!./main-map.html'], function (ig, fav, ko, templateMarkup) {
     var City = function (data) {
         this.id = ko.observable(data.id);
         this.name = ko.observable(data.name);
@@ -23,6 +23,9 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
         this.shopResult = ko.observableArray();
         this.shopPhotos = ko.observableArray();
         this.shopPhoto = ko.observable();
+        this.showRickFavoritesOnly = ko.observable(false);
+        this.showYourFavoritesOnly = ko.observable(false);
+        this.rickFavoritesList = ko.observableArray(rickFavoritesList)
         this.favoritesList = ko.observableArray(localStorage.getItem('cigarStoreFavoritesList')
             ? JSON.parse(localStorage.getItem('cigarStoreFavoritesList')) : []);
 
@@ -147,12 +150,26 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
                     ? JSON.parse(localStorage.getItem('cigarStoreIgnoreList')) : [];
 
                 for (var i = 0; i < results.length; i++) {
-                    if (ignoreList.includes(results[i].place_id) || rickIgnoreList.includes(results[i].place_id)) {
-                        continue;
+                    if(self.showRickFavoritesOnly() == true){
+                        if (rickFavoritesList.includes(results[i].place_id)) {
+                            var place = results[i];
+                            self.addMarker(place);
+                            goodResults.push(results[i]);
+                        }
+                    }else if(self.showYourFavoritesOnly() == true){
+                        if (self.favoritesList().includes(results[i].place_id)) {
+                            var place = results[i];
+                            self.addMarker(place);
+                            goodResults.push(results[i]);
+                        }
+                    }else{
+                        if (ignoreList.includes(results[i].place_id) || rickIgnoreList.includes(results[i].place_id)) {
+                            continue;
+                        }
+                        var place = results[i];
+                        self.addMarker(place);
+                        goodResults.push(results[i]);
                     }
-                    var place = results[i];
-                    self.addMarker(place);
-                    goodResults.push(results[i]);
                 }
 
                 self.shopList(self.createShopList(goodResults));
@@ -166,6 +183,27 @@ define(['ignore', 'knockout', 'text!./main-map.html'], function (ig, ko, templat
                 shopList.push(new Place(placesResults[place]));
             }
             return shopList;
+        };
+
+        this.displayAll = function(){
+            self.showRickFavoritesOnly(false);
+            self.showYourFavoritesOnly(false);
+            city = new google.maps.LatLng(self.currentCity().lat(), self.currentCity().lng());
+            self.currentCityMap(city, self.currentCity().zoom());
+        };
+
+        this.displayYourFavorietesOnly = function(){
+            self.showRickFavoritesOnly(false);
+            self.showYourFavoritesOnly(true);
+            city = new google.maps.LatLng(self.currentCity().lat(), self.currentCity().lng());
+            self.currentCityMap(city, self.currentCity().zoom());
+        };
+
+
+        this.displayRickFavorietesOnly = function(){
+            self.showRickFavoritesOnly(true);
+            city = new google.maps.LatLng(self.currentCity().lat(), self.currentCity().lng());
+            self.currentCityMap(city, self.currentCity().zoom());
         };
 
 
