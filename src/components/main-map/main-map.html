@@ -1,3 +1,8 @@
+<!-- ko if: errorMessage -->
+<div class="error" data-bind="errorMessage"></div>
+<!-- /ko -->
+
+<!-- ko ifno: errorMessage -->
 <div class="row">
     <!-- ko foreach: cityList -->
     <button class="btn btn-primary" data-bind="text: name, click: $parent.setCurrentCity"></button>
@@ -50,7 +55,7 @@
         </div>
     </div>
 </div>
-
+<!-- /ko -->
 
 
 

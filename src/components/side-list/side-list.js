@@ -6,7 +6,6 @@ define(['favorites', 'knockout', 'text!./side-list.html'], function (fav, ko, te
         this.shopList = params.shopList;
         this.favoritesList = params.favoritesList;
         this.showRickFavoritesOnly = ko.observable(params.showRickFavoritesOnly);
-        console.log(this.showRickFavoritesOnly());
 
         this.displayRickFavorietesOnly = function(){
             if(self.showRickFavoritesOnly() == true){

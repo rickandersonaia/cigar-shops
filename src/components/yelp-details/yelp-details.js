@@ -20,13 +20,18 @@ define(['knockout', 'text!./yelp-details.html'], function (ko, templateMarkup) {
                 data: {term: nameParam, location: locationParam},
                 headers: {Authorization: token},
                 error: function (jqXHR, textStatus, errorThrown) {
-                    console.log('Ajax error, jqXHR = ', jqXHR, ', textStatus = ', textStatus, ', errorThrown = ', errorThrown)
+                    // console.log('Ajax error, jqXHR = ', jqXHR, ', textStatus = ', textStatus, ', errorThrown = ', errorThrown)
+                    self.yelpBusinessDetails({error: "Data not available"});
                 }
             };
             $.ajax(requestObj)
                 .done(function (response) {
-                    if(Array.isArray(response.businesses) && response.businesses.length){
+                    if(Array.isArray(response.businesses) && response.total > 0){
+
                         self.yelpBusinessDetails( response.businesses[0]);
+                    }
+                    else{
+                        self.yelpBusinessDetails({error: "Data not available"});
                     }
                 });
         }, this).extend({ deferred: true });

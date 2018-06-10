@@ -12,6 +12,12 @@ define(['ignore', 'favorites', 'knockout', 'text!./main-map.html'], function (ig
         this.placeName = ko.observable(data.name);
     };
 
+    var googleError = function(){
+        this.errorMessage('<h2 class="error">Unfortunately Google Maps was unable to load.  ' +
+            'Please try reloading this page</h2>');
+        alert('An error occurred with Google Maps!  Please try reloading your page.');
+    }
+
     function MainMap(params) {
         var self = this;
         var service;
@@ -19,6 +25,7 @@ define(['ignore', 'favorites', 'knockout', 'text!./main-map.html'], function (ig
         this.currentCity = ko.observableArray();
         this.currentShop = ko.observableArray();
         this.message = ko.observable();
+        this.errorMessage = ko.observable();
         this.shopList = ko.observableArray();
         this.shopResult = ko.observableArray();
         this.shopPhotos = ko.observableArray();
@@ -230,10 +237,12 @@ define(['ignore', 'favorites', 'knockout', 'text!./main-map.html'], function (ig
                         var open = '<span class="closed">Closed</span>'
                     }
 
+                    var address = result.vicinity ? '<p>' + result.vicinity + '</p>' : '';
+                    var phone = result.formatted_phone_number ? '<p>' + result.formatted_phone_number + '</p>' : '';
+                    var rating = result.rating ? '<p> Rating: ' + result.rating + ' of 5</p>' : ''
+
                     var content = '<p class="info-window-title"><b>' + result.name + '</b></p>' +
-                        '<p>' + result.vicinity + '</p>' +
-                        '<p>' + result.formatted_phone_number + '</p>' +
-                        '<p> Rating: ' + result.rating + ' of 5</p>' +
+                        address + phone + rating +
                         '<p class="info-window-footer">' + open + '<button class="btn btn-primary" id="more-details">More details</button></p>';
 
                     infoWindow.setContent(content);
@@ -266,6 +275,7 @@ define(['ignore', 'favorites', 'knockout', 'text!./main-map.html'], function (ig
                 icon: "https://maps.google.com/mapfiles/kml/pal4/icon47.png"
             });
         };
+
     }
 
 
