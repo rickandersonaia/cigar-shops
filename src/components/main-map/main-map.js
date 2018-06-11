@@ -257,8 +257,8 @@ define(['ignore', 'favorites', 'knockout', 'text!./main-map.html'], function (ig
         };
 
         this.addToFavoritesList = function (selected) {
-            console.log('clicked');
-            console.log(selected);
+            //console.log('clicked');
+            //console.log(selected);
             // self.favoritesList.push(selected.place_id);
         }
 
